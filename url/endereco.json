@@ -1,0 +1,21 @@
+{
+    "urlMega" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/mega-sena",
+    "urlQuina" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/quina",
+    "urlLotofacil" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/lotofacil",
+    "urlSaoJoao" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/quina/especial",    
+    "urlIndep" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/lotofacil/especial",
+    "urlVirada" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/mega-sena/especial",
+    "urlDuplaSena" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/dupla-sena",
+    "urlTimemania" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/timemania",
+    "urlLotomania" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/lotomania",
+    "urlDiaDeSorte" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/dia-de-sorte",
+    "urlLoteca" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/loteca",
+    "urlFederal" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/federal",    
+    "urlNaoEncontrada" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/404",
+    "urlTermos" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/termos-de-uso",
+    "urlCarrinho" : "https://www.loteriasonline.caixa.gov.br/silce-web/#/carrinho",
+    "listaPDF": "",
+    "listaJogos" : "",
+    "llrep" : "" 
+
+}

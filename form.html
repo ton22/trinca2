@@ -1,0 +1,107 @@
+<html>
+  <head>
+        
+         <base target="_top"> 
+            
+     <?!=Chamar("EstiloGraficos") ?>  
+     
+  </head>
+  <body>
+    
+            <div id="objetos"style="width: 1250px; height: 570px; border: 1px solid #808080">
+            
+            
+            <label id = "Label1"><font color = "white">Linha</font></label>              
+            <select id = "Campo1" class = "browser-default">
+
+              <option value = "" disabled selected>Escolha uma linha</option>
+              
+                    <? for(var i=0;i<list.length; i++){?>
+       
+                      <option><?=list[i];?> </option>
+       
+                   <?}?>
+           
+             </select>
+             
+            <label id = "Label2"><font color = "white">Marca</font></label>          
+            
+            <select id = "Campo2" class = "browser-default">
+
+              <option value = "" disabled selected>Escolha uma marca</option>
+
+             </select>
+             
+             
+              <label id = "Label3"><font color = "white">Produto</font></label>
+               <select id = "Campo3" class = "browser-default">
+
+              <option value = "" disabled selected>Escolha um produto</option>              
+    
+
+             </select>
+             
+             <label id ="LabelAno"><font color = "white">Ano</font></label>
+            <select id = "ListaAno" class = "browser-default">
+       
+              <option value = "" disabled selected>Escolha um ano</option>       
+      
+                 <option>2020</option>
+                 <option>2021</option>
+                 <option>2022</option>  
+                 <option>2023</option>
+                 <option>2024</option>
+                 <option>2025</option>
+                 <option>2026</option>  
+                 <option>2027</option>
+                 <option>2028</option>
+                 <option>2029</option>
+                 <option>2030</option>  
+                 <option>2031</option>
+                 
+                 <option></option>
+ 
+        </select>
+        
+        <label id ="LabelMes"><font color = "white">Mês</font></label>
+            <select id = "ListaMes" class = "browser-default">
+       
+              <option value = "" disabled selected>Escolha um mês</option>       
+      
+                 <option>JANEIRO</option>
+                 <option>FEVEREIRO</option>
+                 <option>MARÇO</option>  
+                 <option>ABRIL</option>
+                 <option>MAIO</option>
+                 <option>JUNHO</option>
+                 <option>JULHO</option>  
+                 <option>AGOSTO</option>
+                 <option>SETEMBRO</option>
+                 <option>OUTUBRO</option>
+                 <option>NOVEMBRO</option>  
+                 <option>DEZEMBRO</option>
+                 
+                 <option></option>
+ 
+        </select>
+        
+        
+             
+             <div id="Graficopizza"style="width: 580px; height: 419px; border: 1px solid #808080"></div>           
+             <div id="Graficolinhas"style="width: 635px; height: 419px; border: 1px solid #808080"></div>            
+             <div id="totalgrlinha"style="width: 1215px; height: 50px; border: 1px solid #808080"></div>
+             <a href ="https://www.youtube.com/channel/UCr7Kgq0HoakanOPdq3Im67Q" target="_blank">
+             <div id="ds"style="width: 1215px; height: 20px"><font color = "white">DESENVOLVIDO POR CANAL SGP</font></div>
+             </a>
+             
+           </div>
+          
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+         
+         <?!=Chamar("FormGraficos-js")?>
+     
+     
+  </body>
+</html>
+
+
