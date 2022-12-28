@@ -96,7 +96,7 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
    
 
     def verificarConexao(self):
-        with open("\\ProjTrincaDaSorte\\url\\endereco.json", "r") as f:
+        with open(r".\\url\\endereco.json", "r") as f:
             ur = json.load(f)
         self.webEngineView.load(ur['urlTermos'])
         self.webEngineView.loadFinished.connect(self.maiorde18)
@@ -130,8 +130,12 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
             self.avisos("Erro de conexão")
             return
         try:
+            #aqui esta clicando "Uncaught TypeError: Cannot read property 'click' of null" toda hora, colocar condição aqui.
             self.webEngineView.page().runJavaScript("""document.getElementById("botaosim").click();""")
-            self.webEngineView.loadFinished.connect(self.obter_bounds)
+            #self.webEngineView.loadFinished.connect(self.obter_bounds)
+            self.readyBounds(args=1)    
+            self.webEngineView.page().runJavaScript("""document.querySelector("#bs-example-navbar-collapse-1").innerText""", 0, self.getBounds3)
+            
         except:
             self.avisos("Erro ao clicar no botão")
 
@@ -263,7 +267,7 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
         self.webEngineView.page().runJavaScript("""document.querySelector("#carrinho").textContent;""",0,lambda bounds: cartotal.append(bounds))
         
 
-        with open("\\ProjTrincaDaSorte\\url\\endereco.json", "r") as f:
+        with open(r".\\url\\endereco.json", "r") as f:
             ur = json.load(f)                   
         if args == "btnsena":
             self.label.setText("Mega Sena Escolhida")
@@ -636,7 +640,7 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
 
 
     def enviar(self):
-        with open("\\ProjTrincaDaSorte\\url\\endereco.json", "r") as f:
+        with open(r".\\url\\endereco.json", "r") as f:
             ur = json.load(f)                  
                    
         if self.radioButton_4.isChecked():             
@@ -870,7 +874,7 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
         
 
     def limparCarrinho(self): 
-        with open("\\ProjTrincaDaSorte\\url\\endereco.json", "r") as f:
+        with open(r".\\url\\endereco.json", "r") as f:
             ur = json.load(f)
         if self.webEngineView.history().currentItem().url().toString() == ur['urlCarrinho']:
             if self.webEngineView.loadFinished:
@@ -965,8 +969,8 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
         for j in range(pgnum):
             y = 0
             u = 0         
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22.jpg", 0, 750)
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
+            pdf.drawImage(r".\icons\2x\Gradient-background22.jpg", 0, 750)
+            pdf.drawImage(r".\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
             pdf.line(10, 10, 10, 750)
             pdf.line(585, 10, 585, 750)
             pdf.setFont("Times-Roman", 20)       
@@ -1050,8 +1054,8 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
             y = 0
             u = 0
             t = 0
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22.jpg", 0, 750)
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
+            pdf.drawImage(r".\icons\2x\Gradient-background22.jpg", 0, 750)
+            pdf.drawImage(r".\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
             pdf.line(10, 10, 10, 750)
             pdf.line(585, 10, 585, 750)
             pdf.setFont("Times-Roman", 20)       
@@ -1186,8 +1190,8 @@ class Ui_Trinca(QMainWindow,Ui_Trinca):
             y = 0
             u = 0
             t = 0
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22.jpg", 0, 750)
-            pdf.drawImage(r"\ProjTrincaDaSorte\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
+            pdf.drawImage(r".\icons\2x\Gradient-background22.jpg", 0, 750)
+            pdf.drawImage(r".\icons\2x\Gradient-background22rodape.jpg", 0, -20)            
             pdf.line(10, 10, 10, 750)
             pdf.line(585, 10, 585, 750)
             pdf.setFont("Times-Roman", 20)       
